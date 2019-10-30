@@ -1,0 +1,6 @@
+{
+  "name": "ChromePrTemplates",
+  "version": "0.1",
+  "description": "Add and manage multiple PR templates for your GitHub projects",
+  "manifest_version": 1,
+}
