@@ -6,11 +6,13 @@ chrome.storage.sync.get('color', function(data) {
   changeColor.setAttribute('value', data.color);
 });
 
+
 changeColor.onclick = function(element) {
-  let color = element.target.value;
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(
-        tabs[0].id,
-        {code: 'document.getElementById("pull_request_body").value = "thinng thing thing"'});
-  });
+  chrome.storage.sync.get('templateText', function(data) {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+      chrome.tabs.executeScript(
+          tabs[0].id,
+          {code: 'document.getElementById("pull_request_body").value = "' + data.templateText + '"'});
+    });
+  })
 };
