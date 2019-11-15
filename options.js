@@ -13,3 +13,13 @@ function constructOptions(kButtonColors) {
   }
 }
 constructOptions(kButtonColors);
+
+
+function save_template() {
+  let templateText = document.getElementById('templateText').value
+  chrome.storage.sync.set({templateText: templateText}, function() {
+    console.log(templateText)
+  })
+}
+
+document.getElementById('save').addEventListener('click', save_template)
