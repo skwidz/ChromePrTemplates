@@ -1,13 +1,6 @@
-let changeColor = document.getElementById('changeColor');
+let triggerbutton = document.getElementById('triggerbutton');
 
-
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
-});
-
-
-changeColor.onclick = function(element) {
+triggerbutton.onclick = function(element) {
   chrome.storage.sync.get('templateText', function(data) {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       chrome.tabs.executeScript(
