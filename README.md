@@ -7,8 +7,15 @@ TODO:
   - ~~save template~~
   - ~~keyboard shortcut~~
   - ~~BUGFIX: newlines arent pasted correctly~~
-  - nicer looking options menu
-  - auto replace when on page
+  - ~~auto replace when on page~~
+  - auto-replace is opional
   - multiple templates
+  -- save as array
+  -- set default
+  -- delete entries
+  - nicer looking options menu
+  --
+  -- save/delete through ui
+  -- set default through UI
   - auto-add link to jira ticket
   - auto-add labels
