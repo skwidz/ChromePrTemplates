@@ -35,5 +35,11 @@
       "description": "Insert the default template into your PR"
     }
   },
+  "content_scripts":[
+    {
+      "matches": ["https://github.com/*/*/compare/*"],
+      "js": ["template.js"]
+    }
+  ],
   "manifest_version": 2
 }
